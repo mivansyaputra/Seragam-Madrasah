@@ -1,0 +1,65 @@
+PANDUAN PASANG APLIKASI SERAGAM AL FALAHIYAH (OFFLINE, 1 LAPTOP 1 OPERATOR)
+
+A. PASANG (SEKALI SAJA, di laptop yang dipakai kerja)
+1. Ekstrak file ZIP ke folder tetap, misalnya C:\Seragam. Jangan dipindah/diganti nama setelah dipasang.
+2. Klik dua kali Mulai_Seragam.bat. Muncul jendela hitam (server) dan browser terbuka.
+   - Pakai Google Chrome atau Microsoft Edge (Firefox tidak bisa memasang aplikasi).
+   - Port harus selalu 8765. Kalau berubah, data akan terlihat kosong.
+3. Di halaman, klik tombol "Pasang sebagai aplikasi" (kanan atas). Kalau tombol tidak muncul,
+   klik ikon pasang di ujung kanan kolom alamat browser, atau menu titik tiga > "Pasang Seragam Al Falahiyah".
+4. Setelah terpasang, ada ikon di Desktop/Start. Klik kanan > Pin ke taskbar.
+5. Tutup jendela hitam. Mulai sekarang buka lewat ikon aplikasi: jalan TANPA internet dan TANPA server.
+
+B. ISI DATA (SEKALI SAJA)
+- Tab DATA: tempel data siswa dari Excel (Kode KTS, Nama, Kelas), klik Impor.
+- Tab DATA: isi stok awal seragam (opsional).
+
+C. PAKAI SEHARI-HARI
+- Tab SCAN: scan KTS, scan seragam satu per satu, scan SIMPAN (atau scan KTS siswa berikutnya, otomatis tersimpan).
+- Scan BATAL untuk mengulang. Kartu SIMPAN dan BATAL ada di PDF kartu barcode.
+- Chip "cadangan" di kanan atas jadi kuning kalau belum dicadangkan hari ini.
+
+D. CADANGAN (PENTING)
+- Tab DATA > "Unduh cadangan (.json)" tiap selesai hari. Simpan di flashdisk/Google Drive.
+- Tab TRANSAKSI / REKAP SISWA punya tombol Ekspor Excel (CSV) untuk laporan.
+- Data tersimpan di browser laptop itu. Jangan hapus data browser untuk aplikasi ini, dan pakai profil Chrome/Edge yang sama.
+
+E. PINDAH LAPTOP / DEVICE
+Data tersimpan di browser laptop lama, jadi dibawa lewat file cadangan.
+1. Di laptop LAMA: buka aplikasi > tab DATA > klik "Unduh cadangan (.json)".
+   File ini berisi data siswa, stok awal, dan semua transaksi.
+2. Salin file .json itu ke flashdisk atau Google Drive.
+3. Di laptop BARU: ekstrak ZIP dan pasang aplikasinya (ikuti bagian A).
+4. Buka aplikasi > tab DATA > klik "Pulihkan cadangan" > pilih file .json tadi.
+5. Cek angka di kanan atas (siswa, sudah ambil, item keluar). Kalau sama dengan laptop lama, berarti berhasil.
+Catatan:
+- "Pulihkan cadangan" MENIMPA data yang ada di laptop tujuan.
+- Setelah pindah, pakai SATU laptop saja. Data antar laptop tidak tersinkron otomatis;
+  kalau dua laptop dipakai scan sekaligus, datanya terpisah dan sulit digabung.
+- Kalau laptop lama rusak/hilang sebelum sempat dicadangkan, datanya ikut hilang. Cadangkan tiap selesai hari.
+- Tidak mau pindah penuh dan hanya ingin laporan? Pakai tombol Ekspor Excel (CSV) di tab TRANSAKSI / REKAP SISWA.
+
+F. KALAU ADA MASALAH
+- Data kosong setelah dibuka: biasanya karena port/alamat beda atau browser lain. Buka lewat ikon aplikasi yang sama,
+  atau pulihkan dari file cadangan (tab DATA > Pulihkan cadangan).
+- Mulai_Seragam.bat tidak jalan: pastikan ZIP sudah diekstrak (bukan dibuka di dalam ZIP).
+- Pembaruan versi: timpa semua file, jalankan Mulai_Seragam.bat lagi, buka aplikasi sekali, lalu tutup dan buka ulang.
+
+G. FITUR TAMBAHAN
+1. Cadangan otomatis: tab DATA > "Pilih folder cadangan" (mis. flashdisk). Tiap SIMPAN, data otomatis disalin ke folder itu
+   (cadangan_seragam_terbaru.json + satu file per hari). Kalau muncul izin akses folder, pilih Izinkan.
+   Chip "cadangan" di kanan atas jadi "hari ini" kalau sudah tersalin.
+2. Siswa tanpa kartu: di tab SCAN atau BELI, ketik nama/kode di kolom "Cari", lalu klik nama siswanya. Transaksi diberi tanda MANUAL.
+3. Tukar ukuran: tab TRANSAKSI > klik "tukar" di baris barangnya > pilih ukuran baru (atau scan kartu ukuran baru) > TUKAR.
+   Stok ikut menyesuaikan dan riwayat ukuran lama tercatat di kolom Catatan.
+4. Bukti cetak: setelah SIMPAN muncul tombol "Cetak bukti". Bisa juga dari tab REKAP SISWA (link "bukti").
+   Isi nama petugas di tab DATA agar tercetak di bukti.
+5. Tombol SIMPAN dan BATAL selalu ada di tab SCAN dan BELI (pintasan keyboard F2 = SIMPAN, F4 = BATAL).
+6. Menu BELI (siswa yang membeli seragam):
+   - Scan KTS pembeli, scan kartu seragam (scan lagi = tambah jumlah), lalu SIMPAN. Nota bisa dicetak.
+   - Harga jual per jenis diisi di tab DATA (boleh kosong).
+   - Stok dipakai bersama pengambilan, dan REKAP STOK menampilkan kolom Diambil, Dibeli, Sisa, Pesanan menunggu, dan Kurang.
+   - Kalau stok kurang, aplikasi menawarkan "catat sebagai pesanan (indent)". Setelah stok ditambah di tab DATA,
+     klik "penuhi" di daftar pesanan di tab BELI.
+   - Riwayat pembelian bisa dicari dan diekspor ke Excel (CSV).
+
